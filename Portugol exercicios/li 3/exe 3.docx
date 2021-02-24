@@ -1,0 +1,162 @@
+Lista de exercícios (Laço de repetição)
+PARA
+1- A prefeitura de uma cidade fez uma pesquisa entre 20 de seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:   
+a) média do salário da população; 
+b) média do número de filhos; 
+c) maior salário; 
+d) percentual de pessoas com salário até R$100,00.  
+
+programa
+{
+inclua biblioteca Matematica
+ --> mat
+
+funcao inicio()
+{
+inteiro habitantes = 20 , filhos = 0 , x= 0 , somaSalario = 0 ,salario = 0 , somaFilhos = 0 ,maiorSalario = 0 , salariocompa = 0 , porcentual = 0,porcentualHabitantes=0 ,salario100 = 0 ,pessoas100 = 0
+real  mediaSalario , mediaFilhos 
+
+para(x = 1; x<= 20; x=x+1){
+escreva("\nOlá participante numero ",x,". Qual é o seu salario? ")
+leia(salario)
+// pessoas com salário até R$100,00.
+enquanto(salario <= 100){
+salario100 += 1
+pare
+
+}
+
+// maior salario
+enquanto(salario > salariocompa ){maiorSalario =  salario
+salariocompa = salario
+} 
+somaSalario = somaSalario + salario
+escreva("E, quantos filhos você tem? ")
+leia(filhos)
+somaFilhos = somaFilhos + filhos
+}
+
+mediaSalario = somaSalario / (x - 1)
+mediaFilhos = somaFilhos / (x - 1)
+
+//percentual de pessoas com salário até R$100,00.  
+porcentual = ( 100 * salario100 )
+//divide pelo total de habitantes
+porcentualHabitantes = porcentual /habitantes
+escreva("A media do salario da população é ",mediaSalario)
+escreva("\nA media de filhos da população é ",mediaFilhos)
+escreva("\nO maior numero é " ,maiorSalario)
+escreva("\npercentual de pessoas com salário até R$100,00. ",porcentualHabitantes,"%")
+
+}
+}
+
+2- Desenvolver um sistema que efetue a soma de todos os números ímpares que são  múltiplos de três e que se encontram no conjunto dos números de 1 até 500.
+programa
+{
+funcao inicio()
+{
+inteiro numero = 0, soma = 0 , multiplo = 0, x = 0 , somaTodos = 0
+
+escreva("Escreva um numero impar: ")
+leia(numero)
+se(numero % 2 != 0){
+para( x = 0;x <=165 ;x++ ){
+escreva(soma = soma + 3,"  \n")
+somaTodos += soma
+}
+} 
+escreva("\nO Total da Soma é ", somaTodos) 
+}
+}
+
+
+
+ENQUANTO
+1- Elaborar um programa que efetue a leitura sucessiva de valores numéricos e apresente no final o total do somatório, a média e o total de valores lidos. O programa deve fazer as leituras dos valores enquanto o usuário estiver fornecendo valores positivos. Ou seja, o programa deve parar quando o usuário fornecer um valor negativo.
+programa
+{
+funcao inicio()
+{
+inteiro numero =0 , soma =0,media = 0,total = 0 ,somatorio = 0
+escreva("Digite um numero positivo! ")
+leia(numero)
+enquanto(numero >0){
+somatorio = somatorio + numero 
+escreva("Digite um numero positivo! ")
+leia(numero)
+media ++ 
+}
+total = somatorio / media
+escreva("o total dos numeros digitados é ",somatorio, "e a media é ",total)
+}
+}
+
+2- Obtenha um número digitado pelo usuário e repita a operação de multiplicar ele por três  (imprimindo o novo valor) até que ele seja maior do que 100. Ex.: se o usuário digita 5,  deveremos observar na tela a seguinte sequência: 5 15 45 135.
+
+programa
+
+funcao inicio()
+{
+inteiro numero = 0, resultado = 0 , numer = 0
+escreva("Digite o numero ")
+leia(numero)
+escreva(numero, " ")
+enquanto(numero < 100){
+
+numero = numero * 3
+escreva(numero, " ")
+}
+}
+}
+
+FAÇA...ENQUANTO
+1- Faça um programa que mostre uma contagem na tela de 233 a 456, só que contando de 3 em 3 quando estiver entre 300 e 400 e de 5 em 5 quando não estiver.
+programa
+{
+funcao inicio()
+{
+inteiro numero = 230 , contador = 0
+escreva("começando! ")
+enquanto(numero < 300){
+escreva(numero = numero + 3," ")
+}
+se(numero >299){
+enquanto(numero < 455){
+escreva(numero = numero + 5," ")
+}
+}
+}
+}
+
+2- Faça um programa que pegue um número do teclado e calcule a soma de todos os números  de 1 até ele. Ex.: o usuário entra 7, o programa vai mostrar 28, pois  1+2+3+4+5+6+7=28.
+programa
+{
+
+funcao inicio()
+{
+inteiro numero = 0 , soma =0 , cont1 = 1, cont2 = 2, contador = 0 ,somaTotal = 0 ,somaFim =1, contador2 = 0
+cadeia ca = " + "
+escreva("Escreva um numero ")
+leia(numero)
+faca{
+contador ++
+se(contador == numero){
+escreva(" ",soma += cont1," " )
+}senao{
+escreva(soma += cont1, " +")
+}
+se(contador2 <= numero){
+contador2 ++
+somaTotal = somaTotal + contador2
+}
+}enquanto(contador  < numero)
+escreva("= ",somaTotal)
+
+}
+}
+
+
+
+
+

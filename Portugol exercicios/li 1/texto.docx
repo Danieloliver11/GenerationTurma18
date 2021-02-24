@@ -1,0 +1,152 @@
+Programação Seqüencial
+
+1. Faça um sistema que leia a idade de uma pessoa expressa em anos, meses e dias e mostre-a expressa apenas em dias. 
+programa
+{
+funcao inicio()
+{
+inteiro anoNascimento , idade , meses , dias , 
+escreva("qual foi o ano que você nasceu? ")
+leia(anoNascimento)
+idade = 2021 - anoNascimento  // idade :30
+dias = 365 * idade
+meses = dias / 30
+
+escreva("Você tem ",idade," anos, e você teve ",meses," meses e ",dias," dias de vida")
+}
+}
+
+2. Faça um sistema que leia a idade de uma pessoa expressa em dias e mostre-a expressa em anos, meses e dias. 
+3. Faça um sistema que leia o tempo de duração de um evento em uma fábrica expressa em segundos e mostre-o expresso em horas, minutos e segundos.
+programa
+{
+funcao inicio()
+{
+inteiro tempoSegundos, horas , minutos , segundos
+escreva("Qual a duração do evento em segundos ")
+leia(tempoSegundos)
+
+horas = tempoSegundos / 3600
+minutos = (tempoSegundos % 3600) / 60
+segundos = (tempoSegundos % 3600) % 60
+escreva("\nhoras: ",horas)
+escreva("\nminutos: ", minutos)
+escreva("\nsegundos: ", segundos)
+}
+}
+
+ 
+4. Escreva  um sistema que leia três números inteiros e positivos (A, B, C) e calcule a seguinte expressão: 
+, onde  
+programa
+{
+
+funcao inicio()
+{
+inteiro a , b ,c , r ,s ,d
+
+escreva("Digite o numero para a letra A: ")
+leia(a)
+escreva("Digite o numero para a letra B: ")
+leia(b)
+escreva("Digite o numero para a letra C: ")
+leia(c)
+
+r = (a + b)^2 
+s = (b + c)^2
+d = (r + s) / 2
+
+escreva("O calculo da expressão A,B e C é :",d)
+}
+}
+
+5. Faça um sistema que leia as 3 notas de um aluno e calcule a média final deste aluno. Considerar que a média é ponderada e que o peso das notas é: 2,3 e 5, respectivamente.  
+programa
+{
+funcao inicio()
+{
+inteiro m1,m2,m3
+real resul
+escreva("Digite suas 3 notas para calcular sua média final! \n")
+escreva("Digite sua primeira nota!:\n")
+leia(m1)
+escreva("Digite sua segunda nota!:\n")
+leia(m2)
+escreva("Digite sua terceira nota!:\n")
+leia(m3)
+
+resul = ((m1* 2) + (m2* 3) + (m3 * 5)) / (2+ 3 + 5)
+escreva("A media ponderada é: ", resul)
+}
+}
+
+
+
+6. Construa um programa em c que, tendo como dados de entrada dois pontos quaisquer no plano, P(x1, y1) e P(x2, y2), escreva a distância entre eles. A fórmula que efetua tal cálculo é: 
+programa
+{
+inclua biblioteca Matematica
+funcao inicio()
+{
+inteiro x1, y1 , x2 , y2 , d
+escreva("Digite o valor de x1 ")
+leia(x1)
+escreva("Digite o valor de y1 ")
+leia(y1)
+escreva("Digite o valor de x2 ")
+leia(x2)
+escreva("Digite o valor de y2 ")
+leia(y2)
+d = Matematica.raiz((Matematica.potencia((x2-x1),2) + Matematica.potencia((y2-y1),2)),2)
+escreva("O resultado da distancia é ",Matematica.arredondar(d, 3))
+}
+}
+
+7. Um sistema de equações lineares do tipo: 
+, pode ser resolvido segundo mostrado abaixo : 
+ 
+Escreva um sistema que lê os coeficientes a,b,c,d,e e f e calcula e mostra os valores de x e y. 
+programa
+{
+funcao inicio()
+{
+inteiro a,b,c,d,et,f, x, y
+escreva("digite o valor de A ")
+leia(a)
+escreva("digite o valor de B ")
+leia(b)
+escreva("digite o valor de C ")
+leia(c)
+escreva("digite o valor de D ")
+leia(d)
+escreva("digite o valor de E ")
+leia(et)
+escreva("digite o valor de F ")
+leia(f)
+
+x = ((c*et) - (b*f)) / ((a*et)-(b*d))
+y = ((a*f) - (c*d)) / ((a*et)-(b*d))
+
+escreva("Os valores são X: ",x," e Y: ",y)
+}
+}
+
+8. O custo ao consumidor de um carro novo é a soma do custo de fábrica com a percentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que a percentagem do distribuidor seja de 28% e os impostos de 45%, escrever um sistema que leia o custo de fábrica de um carro e escreva o custo ao consumidor. 
+programa
+{
+
+funcao inicio()
+{
+real custoFabrica , consumidor, impostos , custoTotal, porcentagem
+escreva("Qual foi o custo da fabricação?")
+leia(custoFabrica) // 15.000
+porcentagem = (custoFabrica * 0.28) + (custoFabrica * 0.45)
+custoTotal = custoFabrica + porcentagem
+
+escreva("O produto final com todoas as taxas fica ",custoTotal)
+}
+}
+
+
+
+
