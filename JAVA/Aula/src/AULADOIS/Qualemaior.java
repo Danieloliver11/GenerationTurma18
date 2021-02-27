@@ -6,10 +6,11 @@ import java.util.Scanner;
 public class Qualemaior {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
-		int n1, n2, n3, maior =0;
+		int n1, maior =0;
+		
 		System.out.println("Escreva três numeros ");
 		
-		for (int x=0; x < 3 ; x++) {
+		for (int x=0; x < 3 ; x++) { 
 		n1 = leia.nextInt();
 		
 		if(n1 > maior) {
