@@ -50,16 +50,18 @@ public class Exercicio04{
 				mulheresnervosas= mulheresnervosas(mulheresnervosas);}
 			}//MASCULINO
 			else if(sexo ==2) {
-				homensagressivos = homensagressivos(homensagressivos);
+				if(caracteristicas==3) {
+				homensagressivos = homensagressivos(homensagressivos);}
 				//OUTROS
 			}else if(sexo==3){
-				outroscalmos = outroscalmos(outroscalmos);
+				if(caracteristicas==1) {
+				outroscalmos = outroscalmos(outroscalmos);}
 			}
 			
 			// IDADES
 			
 			// verifica se a idade é menor que 18 anos ou maior que 40.!!!!!!!!!!!!
-			if(idade >0 && idade <18 || idade >40 ) {
+			if((idade >0 && idade <18) ||(idade >40 )) {
 				////o número de pessoasnervosas com mais de 40 anos;
 				if(idade>40) {
 					// CARACTERISTICAS
@@ -74,8 +76,10 @@ public class Exercicio04{
 					}
 
 				}
-			}else {
-				System.out.println("[ERRO] O numero digitado para idade não é 0 a 17 anos, e não é maior que 40 anos");
+			}
+			else {
+				System.out.println("[ERRO] O numero digitado para idade não é o esperado! Digite uma idade de zero a dezessete anos, ou uma idade maior que quarenta anos");
+				break;
 			}
 			
 			
