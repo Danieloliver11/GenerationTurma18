@@ -5,12 +5,12 @@ idade, sexo (1-feminino / 2-masculino / 3-Outros), e as opções
 (1, se a pessoa era calma; 2, se a pessoa era nervosa e 3, se a pessoa era agressiva). 
 Pede-se para elaborar um sistema que permita ler os dados de 150 pessoas, calcule e 
 mostre: (WHILE)
-o número de pessoascalmas; ** ok
-o número de mulheresnervosas;| ok
-o número de homensagressivos;|ok
-o número de outroscalmos;| A
-o número de pessoasnervosas com mais de 40 anos; |**| OK
-o número de pessoascalmas com menos de 18 anos. |**| ok
+o número de pessoascalmas; 
+o número de mulheresnervosas;
+o número de homensagressivos;
+o número de outroscalmos;
+o número de pessoasnervosas com mais de 40 anos;
+o número de pessoascalmas com menos de 18 anos.
 */
 package ExercíciosDeRepetição;
 import java.util.Scanner;
