@@ -13,6 +13,7 @@ public class ParaNumeroNegativo {
 		numero = leia.nextInt();
 		if(numero > maior) {
 			maior = numero;
+			
 		}
 		
 		}while(numero>=0);
