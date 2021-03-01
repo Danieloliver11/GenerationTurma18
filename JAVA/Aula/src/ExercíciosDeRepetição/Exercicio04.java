@@ -22,7 +22,7 @@ public class Exercicio04{
 		int idade=0,sexo=0,caracteristicas=0,contador=0;
 		char continua ='S';
 		int pessoascalmas=0,mulheresnervosas=0,homensagressivos=0,
-				outroscalmos=0,pessoasnervosas40=0,pessoascalmas18=0;
+		outroscalmos=0,pessoasnervosas40=0,pessoascalmas18=0;
 	
 		
 		do {// per idade
@@ -43,7 +43,7 @@ public class Exercicio04{
 			
 			
 			
-			//GENEROS !!!!!!
+			//GENEROS.
 			// FEMININO
 			if(sexo ==1) {
 				if(caracteristicas ==2) {
@@ -60,7 +60,7 @@ public class Exercicio04{
 			
 			// IDADES
 			
-			// verifica se a idade é menor que 18 anos ou maior que 40.!!!!!!!!!!!!
+			// verifica se a idade é menor que 18 anos ou maior que 40.
 			if((idade >0 && idade <18) ||(idade >40 )) {
 				////o número de pessoasnervosas com mais de 40 anos;
 				if(idade>40) {
@@ -68,7 +68,7 @@ public class Exercicio04{
 					if(caracteristicas ==2) {
 						pessoasnervosas40 = pessoasnervosas40(pessoasnervosas40);
 					}
-				}///o número de pessoasnervosas com menos de 18 anos!!!!!!!!!!
+				}///o número de pessoasnervosas com menos de 18 anos.
 				else if(idade <18) {
 					// CARACTERISTICAS
 					if(caracteristicas == 1) {
@@ -98,14 +98,11 @@ public class Exercicio04{
 		System.out.printf("\nO número de outras pessoas calmas são: %d",outroscalmos,"\n");
 		System.out.printf("\nO número de pessoas nervosas com mais de 40 anos são: %d",pessoasnervosas40,"\n");
 		System.out.printf("\nO número de pessoas calmas com menos de 18 anos são: %d",pessoascalmas18,"\n");
-		/*
-		o número de pessoascalmas com menos de 18 anos. |**| ok
-		*/
 		
 	}
 	
 	
-	// Funções
+	// TESTANDO FUNÇÕES!
 	public static int pessoascalmas(int pessoascalmas) {
 		//o número de pessoascalmas 
 		pessoascalmas ++;
