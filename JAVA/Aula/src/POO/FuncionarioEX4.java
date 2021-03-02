@@ -12,7 +12,7 @@ public class FuncionarioEX4 {
 		
 		fulano.setNome("João das Neves");
 		fulano.setIdade(1991);
-		fulano.setDepartamento("Desenvolvedor");
+		fulano.setDepartamento("Desenvolvimento");
 		
 		System.out.printf("O funcionário  %s do ID: %d idade: %d anos. Funcionario do departamento: %s",fulano.getNome(),fulano.getId(),fulano.getIdade(),fulano.getDepartamento());
 
