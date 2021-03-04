@@ -60,6 +60,7 @@ public void setAtiva(boolean ativa) {
 }
 	
 //metodo
+//chegada de dinherio
 public void credito(double valor) {
 	this.saldo = this.saldo + valor;
 }

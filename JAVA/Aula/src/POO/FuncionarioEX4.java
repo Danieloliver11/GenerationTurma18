@@ -4,13 +4,19 @@ referentes esta classe, em seguida crie um objeto funcionário, defina as
 instancias deste objeto e apresente as informações deste objeto no
 console.*/
 package POO;
-
+import java.util.Scanner;
 public class FuncionarioEX4 {
 
 	public static void main(String[] args) {
 		Funcionario fulano = new Funcionario();
+		Scanner leia = new Scanner(System.in);
+		String nome;
 		
-		fulano.setNome("João das Neves");
+		System.out.println("qual é o nome?");
+		nome = leia.next();
+		
+		
+		fulano.setNome(nome);
 		fulano.setIdade(1991);
 		fulano.setDepartamento("Desenvolvimento");
 		
