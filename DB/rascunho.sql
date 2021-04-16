@@ -29,9 +29,10 @@ insert into pessoas
  alter table pessoas
  add column profissao varchar(20) after nome;
  
+  # mudar nome das colunas  #
  alter table pessoas
  change column profissao 
- trabalho varchar (20);  # mudar nome das colunas  #
+ trabalho varchar (20); 
  
  create table cursos(
  nome varchar(20) not null unique,
