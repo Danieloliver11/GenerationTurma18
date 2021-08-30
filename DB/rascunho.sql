@@ -318,3 +318,7 @@ change column data
 data_assistir_curso date
 ;
  
+ 
+ # TOP 3 para trazer apenas os três primeiros registros,
+SELECT TOP 3 *
+FROM aluno;
