@@ -26,6 +26,7 @@ insert into pessoas
  alter table pessoas
  drop column profissao;
  
+ #NOVO COLUNA  depois do nome
  alter table pessoas
  add column profissao varchar(20) after nome;
  
