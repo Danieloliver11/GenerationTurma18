@@ -323,4 +323,5 @@ data_assistir_curso date
 SELECT TOP 3 *
 FROM aluno;
 
+# ORDER BY [coluna ou colunas] ASC
 #(ASC para ordem crescente ou DESC para ordem decrescente)
