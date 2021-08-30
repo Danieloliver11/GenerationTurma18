@@ -56,7 +56,7 @@ insert into pessoas
  add column descricao text 
  after nome;
 
- insert into cursos value ('1','python','SUPER AULAS DE PYTHON','30', '201','2020','flango de pastel'),('2','SQL','SUPER AULAS DE SQL','31', '202','2021','Mandioca'),
+ insert into cursos values ('1','python','SUPER AULAS DE PYTHON','30', '201','2020','flango de pastel'),('2','SQL','SUPER AULAS DE SQL','31', '202','2021','Mandioca'),
  ('3','html','SUPER AULAS DE HTML','32', '103','2021','Pudim'),('4','javascript','SUPER AULAS DE JAVASCRIPT','33', '204','2022','fsuco de laranja');
  
  select * from cursos;
