@@ -26,6 +26,7 @@ insert into pessoas
  alter table pessoas
  drop column profissao;
  
+ #NOVO COLUNA  depois do nome
  alter table pessoas
  add column profissao varchar(20) after nome;
  
@@ -55,7 +56,7 @@ insert into pessoas
  add column descricao text 
  after nome;
 
- insert into cursos value ('1','python','SUPER AULAS DE PYTHON','30', '201','2020','flango de pastel'),('2','SQL','SUPER AULAS DE SQL','31', '202','2021','Mandioca'),
+ insert into cursos values ('1','python','SUPER AULAS DE PYTHON','30', '201','2020','flango de pastel'),('2','SQL','SUPER AULAS DE SQL','31', '202','2021','Mandioca'),
  ('3','html','SUPER AULAS DE HTML','32', '103','2021','Pudim'),('4','javascript','SUPER AULAS DE JAVASCRIPT','33', '204','2022','fsuco de laranja');
  
  select * from cursos;
@@ -317,3 +318,10 @@ change column data
 data_assistir_curso date
 ;
  
+ #========================
+ # TOP 3 para trazer apenas os três primeiros registros,
+SELECT TOP 3 *
+FROM aluno;
+
+# ORDER BY [coluna ou colunas] ASC
+#(ASC para ordem crescente ou DESC para ordem decrescente)
