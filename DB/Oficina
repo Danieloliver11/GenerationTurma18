@@ -1,0 +1,78 @@
+use cidade;
+
+create table tb_oficina(
+id int auto_increment,
+nome varchar(60),
+dono varchar(60),
+endereco varchar(60),
+primary key (id)
+);
+
+insert into tb_oficina (nome, dono, endereco) values ('Oficina do Ramos','Raimundo Ramos','Rua Oitavas de azevedo');
+insert into tb_oficina (nome, dono , endereco) values ('Ferro novo', 'Michel Silva', 'Rua Longa rua');
+
+select * from tb_oficina;
+
+create table tb_funcionario(
+id int auto_increment,
+nome varchar(60) not null,
+idade tinyint not null,
+cpf varchar(14) not null, 
+cargo varchar(15) not null,
+problema text not null,
+
+oficinaFK int not null,
+primary key(id),
+foreign key (oficinaFK) references tb_oficina(id)
+);
+
+alter table tb_funcionario change cpf cpf varchar(14) unique not null;
+alter table tb_funcionario drop column problema;
+
+insert into tb_funcionario (nome, idade, cpf, cargo, oficinaFK) values ('Baulo dino', 45, '045.687.158-88','Funileiro',1);
+insert into tb_funcionario (nome, idade, cpf, cargo, oficinaFK) values ('Mario Barbosa', 50, '111.547.158-88','Funileiro',1);
+insert into tb_funcionario (nome, idade, cpf, cargo, oficinaFK) values ('Guilherme Ferreira', 38, '000.547.158-88','mecanico',1);
+insert into tb_funcionario (nome, idade, cpf, cargo, oficinaFK) values ('João Neves', 40, '458.457.154-55','Mecanico',1);
+
+insert into tb_funcionario (nome, idade, cpf, cargo, oficinaFK) values ('Junior Dio', 55, '554.987.115-69','Funileiro',2);
+insert into tb_funcionario (nome, idade, cpf, cargo, oficinaFK) values ('Luiz Barbosa', 59, '125.874.698-11','Mecanico',2);
+insert into tb_funcionario (nome, idade, cpf, cargo, oficinaFK) values ('Pedro de Alcantara Braganca', 60, '000.444.158-44','Mecanico',2);
+
+
+
+select * from tb_funcionario;
+
+select * from tb_oficina oficina 
+inner join tb_funcionario funcionario on
+oficina.id = funcionario.oficinaFK ;
+
+
+create table tb_cliente(
+id int auto_increment,
+nome varchar(60),
+celular varchar(12) not null,
+carro varchar(30),
+problema text not null,
+dataHora  TIMESTAMP default CURRENT_TIMESTAMP,
+oficinaFK int not null,
+
+primary key (id),
+foreign key(oficinaFK) references tb_oficina(id)
+
+);
+
+alter table tb_cliente add column funcionarioFK int not null after oficinaFK;
+alter table tb_cliente add constraint funcionarioFK foreign key(funcionarioFK) references tb_funcionario(id);
+
+insert into tb_cliente (nome, celular, carro, problema, oficinaFK, funcionarioFK) values ('Leandro Freitas', '11587456-549', 'Fiat Uno','Arrumar amassado na porta esquerda', 1, 1);
+insert into tb_cliente (nome, celular, problema, oficinaFK, funcioarioFK) values ('Fabio Lima',);
+select * from tb_cliente;
+
+
+-- inner join com 3 tabelas 
+select oficina.nome as oficina , funcionario.nome as mecânico , funcionario.cargo ,cliente.nome ,
+cliente.carro , cliente.problema from tb_oficina oficina 
+inner join tb_funcionario funcionario 
+on oficina.id = funcionario.oficinaFK 
+inner join tb_cliente cliente 
+on funcionario.id = cliente.funcionarioFK;
